@@ -12,7 +12,6 @@ Based on the datapath schematic, the system is divided into five classic executi
 ### 1. Instruction Fetch (IF)
 * **`PC.v` (Program Counter):** A 32-bit register holding the address of the current instruction. A dedicated adder (`PC + 4`) computes the next sequential instruction address.
 * **`INSTR_MEM.v` (Instruction Memory):** Receives the 32-bit address from the PC and outputs the 32-bit instruction code (`INSTR[31:0]`).
-<img width="1920" height="810" alt="image" src="https://github.com/user-attachments/assets/82c7710c-26ab-4f08-af56-ae1d711b2f97" />
 
 ### 2. Instruction Decode (ID) & Register Read
 * **`REG_FILE.v` (Register File):** Contains thirty-two 32-bit registers. 
@@ -42,6 +41,12 @@ The **Control Unit** decodes the 6-bit Opcode (`INSTR[31:26]`) and generates the
 * `ALUSRC`: Selects ALU operand B (Register vs. Immediate).
 * `MEMWRITE` / `MEMREAD`: Controls Data Memory access.
 * `MEMTOREG`: Selects the data source for the Register File write-back stage.
+<img width="5764" height="3324" alt="image" src="https://github.com/user-attachments/assets/8b9a9589-11c3-4479-9451-d006a280fa78" />
+<img width="3964" height="1888" alt="image" src="https://github.com/user-attachments/assets/49f5540a-1279-44fb-b7b0-dd1a2da9983e" />
+<img width="4532" height="2608" alt="image" src="https://github.com/user-attachments/assets/8657b2e1-415b-4cef-857d-5cb17a011edc" />
+<img width="5656" height="2564" alt="image" src="https://github.com/user-attachments/assets/d52ae0ab-8084-4cf6-a57e-bf94a7443916" />
+<img width="6064" height="3324" alt="image" src="https://github.com/user-attachments/assets/c0fc5baf-c1af-4071-ac89-65cb96497726" />
+
 
 
 **Huỳnh Thị Hồng Tú (Tupink)**
