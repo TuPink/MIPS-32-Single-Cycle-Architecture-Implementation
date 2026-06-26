@@ -5,12 +5,14 @@ This repository contains the Verilog/HDL implementation and simulation of a **MI
 
 The implementation explicitly separates the **Control Unit** and the **Datapath**, demonstrating hardware-level data routing using multiplexers and control signals.
 
+
 ##  Hardware Architecture & Datapath Mapping
 Based on the datapath schematic, the system is divided into five classic execution stages, mapped directly to the implemented Verilog modules:
 
 ### 1. Instruction Fetch (IF)
 * **`PC.v` (Program Counter):** A 32-bit register holding the address of the current instruction. A dedicated adder (`PC + 4`) computes the next sequential instruction address.
 * **`INSTR_MEM.v` (Instruction Memory):** Receives the 32-bit address from the PC and outputs the 32-bit instruction code (`INSTR[31:0]`).
+<img width="1920" height="810" alt="image" src="https://github.com/user-attachments/assets/82c7710c-26ab-4f08-af56-ae1d711b2f97" />
 
 ### 2. Instruction Decode (ID) & Register Read
 * **`REG_FILE.v` (Register File):** Contains thirty-two 32-bit registers. 
